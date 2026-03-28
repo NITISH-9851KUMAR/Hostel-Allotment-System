@@ -64,7 +64,7 @@ public class CountValue {
         for (String roomName : roomNameList) {
             int count = mapRoom.getOrDefault(roomName, 0);
             if (roomName.equals("R-412") && count == 8) {
-                emptyRoom.add("R-412 Room is Full");
+                emptyRoom.add("R-412 Room is Full,");
             }
             if (count != 8) {
                 emptyRoom.add(roomName);
@@ -96,7 +96,7 @@ public class CountValue {
 
     public static int getPercentageValue() {
         int val= countAllotRoom();
-        double val2= (val*100.0)/208.0;
+        double val2= (val*100.0)/200.0;
         return (int)Math.rint(val2);
     }
 

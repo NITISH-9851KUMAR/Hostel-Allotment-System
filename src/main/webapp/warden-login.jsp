@@ -49,6 +49,7 @@
                 <input type="text"
                        id="username"
                        name="userid"
+                       required
                        placeholder="Enter your ID"
                        class="w-full mt-2 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600">
             </div>
@@ -59,6 +60,7 @@
                 <input type="password"
                        id="password"
                        name="password"
+                       required
                        placeholder="Enter password"
                        class="w-full mt-2 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600">
             </div>

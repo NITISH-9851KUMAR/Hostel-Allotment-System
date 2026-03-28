@@ -71,7 +71,7 @@
     Please login again or contact the administrator.
   </p>
 
-  <a href="student-login.jsp">
+  <a href="index.jsp">
     <button class="btn">Go to Login Page</button>
   </a>
 

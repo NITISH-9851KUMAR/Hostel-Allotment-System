@@ -257,10 +257,13 @@
                             <%
                                 for (String roomNumber : roomNumberList) {
                                     if (roomNumber.equals("R-408")) { %>
-                            <option value="" disabled>R-408 Rector Room
+                            <option value="" disabled>R-408  Rector Room
                             </option>
                             <%} else if (roomNumber.equals("R-412")) { %>
-                            <option value="R-412">R-412 Developer Room
+                            <option value="R-412">R-412  Developer Room
+                            </option>
+                            <%} else if (roomNumber.equals("R-424")) { %>
+                            <option value="" disabled>R-424  Store Room
                             </option>
                             <%
                             } else if (roomNumber.equals("R-412 Room is Full")) { %>
@@ -288,7 +291,6 @@
             </div>
         </form>
     </div>
-
 </main>
 </body>
 <script src="js/add-new-student.js"></script>
