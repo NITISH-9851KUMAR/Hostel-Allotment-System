@@ -3,7 +3,7 @@ function addStudentFormSubmit() {
         e.preventDefault();   // stops ?studentName=... in URL
         let formData = new FormData(this);
 
-        fetch("allot-room-servlet", {
+        fetch(contextPath+"/allot-room-servlet", {
             method: "POST",
             body: formData
         })

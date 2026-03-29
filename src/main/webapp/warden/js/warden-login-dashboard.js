@@ -26,7 +26,7 @@ function getAddRoom(element) {
     );
 
     // load page
-    fetch("add-new-student.jsp")
+    fetch(contextPath+"/warden/add-new-student.jsp")
         .then(res => res.text())
         .then(data => {
             document.getElementById("allot-new-student-section").innerHTML = data;
@@ -40,7 +40,7 @@ function logoutWarden(event) {
     event.preventDefault();
 
     // call logout servlet using fetch
-    fetch("warden-logout", {
+    fetch(contextPath+"/warden-logout", {
         method: "POST"
     })
         .then(() => {
@@ -52,7 +52,7 @@ function logoutWarden(event) {
             })
                 // redirect to login page
                 .then(() => {
-                    window.location.href = "warden-login.jsp";
+                    window.location.href = contextPath+ "/warden/warden-login.jsp";
                 });
         })
 }

@@ -2,7 +2,7 @@ document.getElementById("student-pass-recover-form").addEventListener("submit", 
     e.preventDefault();
 
     let formData = new FormData(this);
-    fetch("forgot-password", {
+    fetch(contextPath+"/forgot-password", {
         method: "POST",
         body: formData
     })

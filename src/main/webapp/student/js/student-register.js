@@ -3,7 +3,7 @@ document.getElementById("student-register-form").addEventListener("submit", func
 
     let formData = new FormData(this);
 
-    fetch("student-register", {
+    fetch(contextPath+"/student-register", {
         method: "POST",
         body: formData
     })

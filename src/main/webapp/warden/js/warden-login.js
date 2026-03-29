@@ -5,7 +5,7 @@ document.getElementById("warden-login-form").addEventListener("submit", function
 
     // get form details
     let form = new FormData(this);
-    fetch("warden-login", {
+    fetch(contextPath+"/warden-login", {
         method: "POST",
         body: form
     })
@@ -26,7 +26,7 @@ document.getElementById("warden-login-form").addEventListener("submit", function
                 timer: 2000
                 // confirmButtonText: 'OK'
             }).then(() => {
-                window.location.replace("warden-login-dashboard.jsp");
+                window.location.replace(contextPath+"/warden/warden-login-dashboard.jsp");
             });
         })
         .catch(() => {

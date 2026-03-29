@@ -1,6 +1,7 @@
 package dao;
 
 import helper.ConnectionProvider;
+import model.Room;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -64,7 +65,7 @@ public class CountValue {
         for (String roomName : roomNameList) {
             int count = mapRoom.getOrDefault(roomName, 0);
             if (roomName.equals("R-412") && count == 8) {
-                emptyRoom.add("R-412 Room is Full,");
+                emptyRoom.add("R-412 Room is Full");
             }
             if (count != 8) {
                 emptyRoom.add(roomName);
@@ -96,12 +97,16 @@ public class CountValue {
 
     public static int getPercentageValue() {
         int val= countAllotRoom();
-        double val2= (val*100.0)/200.0;
-        return (int)Math.rint(val2);
+        return (int) ((val*100)/200.0);
     }
 
     public static void main(String[] args) {
         System.out.println(getPercentageValue());
+//        List<String> roomList= getEmptyRoom();
+//        for(String r: roomList){
+//            System.out.println(r);
+//        }
+
     }
 
 }

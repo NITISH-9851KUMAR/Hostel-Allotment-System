@@ -1,5 +1,5 @@
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -146,7 +146,10 @@
     });
 </script>
 <!-- END: Interactive Elements Script -->
+<script>
+    const contextPath = "<%= request.getContextPath() %>";
+</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="js/student-pass-recover.js"></script>
+<script src="${pageContext.request.contextPath}/student/js/student-pass-recover.js"></script>
 </body>
 </html>

@@ -2,15 +2,14 @@
 <%@ page import="model.Student" %>
 <%@ page import="java.util.List" %>
 <%@ page import="model.Warden" %>
-<%@ page isErrorPage="true" %>
-<%@ page errorPage="../student/error-page.jsp" %>
+<%@ page isELIgnored="false" %>
 
 <!DOCTYPE html>
 <html class="light" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-    <title>Academic Vanguard - Warden Portal</title>
+    <title>Academic Vanguard - Administrative Portal</title>
     <!-- Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
           rel="stylesheet"/>
@@ -202,7 +201,7 @@
             <div class="flex items-center gap-3 group cursor-pointer">
                 <div class="text-right hidden sm:block">
                     <p class="text-sm font-bold text-blue-900 leading-tight"><%=warden.getName()%></p>
-                    <p class="text-[10px] text-outline font-medium">Chief Warden Sir</p>
+                    <p class="text-[10px] text-outline font-medium">Administrative Sir</p>
                 </div>
                 <div class="relative w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container ring-4 ring-primary/5">
                     <img alt="Warden Profile" class="w-full h-full object-cover"
@@ -403,9 +402,12 @@
         </p>
     </footer>
 </main>
+<script>
+    const contextPath = "<%= request.getContextPath() %>";
+</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="js/warden-login-dashboard.js"></script>
-<script src="js/add-new-student.js"></script>
+<script src="${pageContext.request.contextPath}/warden/js/warden-login-dashboard.js"></script>
+<script src="${pageContext.request.contextPath}/warden/js/add-new-student.js"></script>
 <script>
     // Mobile sidebar toggle functionality
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');

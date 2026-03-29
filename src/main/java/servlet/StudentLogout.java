@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpSession;
 public class StudentLogout extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
-        HttpSession session = request.getSession(false);
+        HttpSession session = request.getSession();
 
         if (session != null) {
             session.invalidate();   // destroy session

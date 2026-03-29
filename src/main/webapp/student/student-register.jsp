@@ -1,5 +1,5 @@
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -175,15 +175,12 @@
         const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
         passwordInput.setAttribute('type', type);
     });
-
-    // // Form submission prevention for demo
-    // document.querySelector('[data-purpose="register-form"]').addEventListener('submit', function (e) {
-    //     e.preventDefault();
-    //     console.log('Registration attempted');
-    // });
 </script>
 <!-- END: Interactive Elements Script -->
+<script>
+    const contextPath = "<%= request.getContextPath() %>";
+</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="js/student-register.js"></script>
+<script src="${pageContext.request.contextPath}/student/js/student-register.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <!-- error.jsp -->
 <%@ page isErrorPage="true" %>
+<%@ page isELIgnored="false" %>
 
 <html>
 <head>
@@ -71,7 +72,7 @@
     Please login again or contact the administrator.
   </p>
 
-  <a href="../index.jsp">
+  <a href="${pageContext.request.contextPath}/student/student-login.jsp">
     <button class="btn">Go to Login Page</button>
   </a>
 

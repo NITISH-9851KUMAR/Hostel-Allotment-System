@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<%@ page import="java.sql.*" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="dao.getRoomNumber" %>
 <%@ page import="dao.CountValue" %>
+<%@ page isELIgnored="false" %>
 <html class="light" lang="en">
+
+<!DOCTYPE html>
 <head>
     <%
         List<String> roomNumberList = CountValue.getEmptyRoom();
@@ -267,7 +266,7 @@
                             </option>
                             <%
                             } else if (roomNumber.equals("R-412 Room is Full")) { %>
-                            <option disabled value="">R-412 Room is Full Developer Room
+                            <option disabled value="">R-412 Room is Full, Developer Room
                             </option>
                             <%
                             } else { %>
@@ -293,6 +292,9 @@
     </div>
 </main>
 </body>
-<script src="js/add-new-student.js"></script>
+<script>
+    const contextPath = "<%= request.getContextPath() %>";
+</script>
+<script src="${pageContext.request.contextPath}/warden/js/add-new-student.js"></script>
 </html>
 

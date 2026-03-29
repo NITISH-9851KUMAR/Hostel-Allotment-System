@@ -1,11 +1,12 @@
 <%@ page isErrorPage="true" %>
-<%@ page errorPage="../student/error-page.jsp" %>
+<%@ page isELIgnored="false" %>
+
 <!DOCTYPE html>
 <html class="light" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Warden Portal Login</title>
+    <title>Administrative Portal Login</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -36,7 +37,7 @@
 
         <!-- Heading -->
         <div class="text-center mb-8">
-            <h1 class="text-2xl font-bold text-indigo-900">Warden Portal</h1>
+            <h1 class="text-2xl font-bold text-indigo-900">Administrative Portal</h1>
             <p class="text-sm text-gray-600 mt-1">Secure Login Access</p>
         </div>
 
@@ -45,7 +46,7 @@
 
             <!-- Username -->
             <div>
-                <label class="text-sm font-semibold text-gray-700">Warden ID</label>
+                <label class="text-sm font-semibold text-gray-700">Administrative ID</label>
                 <input type="text"
                        id="username"
                        name="userid"
@@ -80,11 +81,13 @@
 
     </div>
 </main>
-
+<script>
+    const contextPath = "<%= request.getContextPath() %>";
+</script>
 <!-- SweetAlert -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!-- JS File -->
-<script src="js/warden-login.js"></script>
+<script src="${pageContext.request.contextPath}/warden/js/warden-login.js"></script>
 
 </body>
 </html>
