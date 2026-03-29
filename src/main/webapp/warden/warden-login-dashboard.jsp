@@ -3,7 +3,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="model.Warden" %>
 <%@ page isErrorPage="true" %>
-<%@ page errorPage="error-page.jsp" %>
+<%@ page errorPage="../student/error-page.jsp" %>
 
 <!DOCTYPE html>
 <html class="light" lang="en">
@@ -206,7 +206,7 @@
                 </div>
                 <div class="relative w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container ring-4 ring-primary/5">
                     <img alt="Warden Profile" class="w-full h-full object-cover"
-                         data-alt="Portrait of a middle aged man in academic attire" src="image/warden_sir_logo.png"/>
+                         data-alt="Portrait of a middle aged man in academic attire" src="../image/warden_sir_logo.png"/>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<%@ page isELIgnored="false" %>
 <html class="light" lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -110,15 +110,10 @@
                     <h3 class="text-xl font-bold mb-2 dark:text-white">Student Login</h3>
                     <p class="text-slate-500 dark:text-slate-400 mb-8">Access your room preferences, check allotment
                         status, and manage your hostel fees.</p>
-                    <%--                    <button onclick="window.location.href='student-login.jsp'"  class="w-full py-4 rounded-xl bg-primary text-white font-bold transition-all hover:shadow-lg hover:shadow-primary/20 flex items-center justify-center gap-2">--%>
-                    <%--                        Enter Student Portal--%>
-                    <%--                        <span class="material-symbols-outlined text-sm">login</span>--%>
-                    <%--                    </button>--%>
-                    <button onclick="window.location.href='student-login.jsp'"
-                            class="w-full py-4 rounded-xl bg-primary text-white font-bold transition-all hover:shadow-lg hover:shadow-primary/20 flex items-center justify-center gap-2">
+                    <a href="${pageContext.request.contextPath}/student/student-login.jsp" class="w-full py-4 rounded-xl bg-primary text-white font-bold transition-all hover:shadow-lg hover:shadow-primary/20 flex items-center justify-center gap-2">
                         Enter Student Portal
                         <span class="material-symbols-outlined text-sm">login</span>
-                    </button>
+                    </a>
                 </div>
                 <div class="group p-8 rounded-2xl bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5">
                     <div class="size-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -127,10 +122,14 @@
                     <h3 class="text-xl font-bold mb-2 dark:text-white">Warden Login</h3>
                     <p class="text-slate-500 dark:text-slate-400 mb-8">Administrative access to manage inventory, allot
                         rooms, and generate student reports.</p>
-                    <button onclick="window.location.href='warden-login.jsp'" class="w-full py-4 rounded-xl bg-slate-900 dark:bg-slate-700 text-white font-bold transition-all hover:bg-slate-800 flex items-center justify-center gap-2">
+<%--                    <button onclick="window.location.href='${pageContext.request.contextPath}/warden/warden-login.jsp'" class="w-full py-4 rounded-xl bg-slate-900 dark:bg-slate-700 text-white font-bold transition-all hover:bg-slate-800 flex items-center justify-center gap-2">--%>
+<%--                        Enter Warden Portal--%>
+<%--                        <span class="material-symbols-outlined text-sm">admin_panel_settings</span>--%>
+<%--                    </button>--%>
+                    <a href="${pageContext.request.contextPath}/warden/warden-login.jsp" class="w-full py-4 rounded-xl bg-slate-900 dark:bg-slate-700 text-white font-bold transition-all hover:bg-slate-800 flex items-center justify-center gap-2" >
                         Enter Warden Portal
                         <span class="material-symbols-outlined text-sm">admin_panel_settings</span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

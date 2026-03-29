@@ -1,8 +1,9 @@
 document.getElementById("student-login-form").addEventListener("submit", function (e) {
+    // alert();
     e.preventDefault();
-
+    // const contextPath = "<%=request.getContextPath()%>";
     let formData = new FormData(this);
-    fetch("student-login", {
+    fetch(contextPath+"/student-login", {
         method: "POST",
         body: formData
     })
@@ -24,7 +25,7 @@ document.getElementById("student-login-form").addEventListener("submit", functio
                 timer: 1000,
                 showConfirmButton: false,
                 willClose: () => {
-                    window.location.href = "student-login-dashboard.jsp";
+                    window.location.href = contextPath+"student-login-dashboard.jsp";
                 }
             });
         })

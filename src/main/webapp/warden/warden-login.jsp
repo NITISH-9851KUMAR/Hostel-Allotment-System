@@ -1,5 +1,5 @@
 <%@ page isErrorPage="true" %>
-<%@ page errorPage="error-page.jsp" %>
+<%@ page errorPage="../student/error-page.jsp" %>
 <!DOCTYPE html>
 <html class="light" lang="en">
 <head>
@@ -22,7 +22,7 @@
 
 <!-- ========== RESPONSIVE BACKGROUND (Change Image Anytime) ========== -->
 <div class="fixed inset-0 -z-10">
-    <img src="image/Hostel_Image1.jpeg"
+    <img src="../image/Hostel_Image1.jpeg"
          class="w-full h-screen object-cover object-center"
          alt="background">
     <!-- Change overlay color here -->

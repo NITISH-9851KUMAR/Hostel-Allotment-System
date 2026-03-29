@@ -1,5 +1,6 @@
 <%@ page isErrorPage="true" %>
-<%@ page errorPage="error-page.jsp" %>
+<%@ page errorPage="/student/student-error-page.jsp"%>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +64,7 @@
         <button class="flex-1 py-4 text-sm font-semibold text-brand-primary border-b-2 border-brand-primary">
             Login
         </button>
-        <button onclick="window.location.href='student-register.jsp'"
+        <button onclick="window.location.href='${pageContext.request.contextPath}/student/student-register.jsp'"
                 class="flex-1 py-4 text-sm font-semibold text-gray-400 hover:text-gray-600 transition-colors">
             Register
         </button>
@@ -125,13 +126,13 @@
             <!-- Links Section -->
             <div class="text-center space-y-4 pt-2">
                 <a class="text-sm font-medium text-brand-accent hover:underline block"
-                   data-purpose="forgot-password-link" href="student-password-forgot.jsp">
+                   data-purpose="forgot-password-link" href="${pageContext.request.contextPath}/student/student-password-forgot.jsp">
                     Forgot Password?
                 </a>
                 <p class="text-sm text-gray-500">
                     New to Hostel?
                     <a class="text-brand-primary font-bold hover:underline" data-purpose="create-account-link"
-                       href="student-register.jsp">
+                       href="${pageContext.request.contextPath}/student/student-register.jsp">
                         Create Account
                     </a>
                 </p>
@@ -151,8 +152,11 @@
     });
 
 </script>
+<script>
+    const contextPath = "<%= request.getContextPath() %>";
+</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="js/student-login.js"></script>
+<script src="${pageContext.request.contextPath}/student/js/student-login.js"></script>
 <!-- END: Interactive Elements Script -->
 </body>
 </html>

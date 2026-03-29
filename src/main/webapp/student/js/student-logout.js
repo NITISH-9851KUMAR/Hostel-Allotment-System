@@ -1,7 +1,7 @@
 document.getElementById("logout-student").addEventListener("click", function(e){
     e.preventDefault();
     // call logout servlet using fetch
-    fetch("logout-student", {
+    fetch( contextPath+"/logout-student", {
         method: "POST"
     })
         .then(() => {
@@ -13,9 +13,8 @@ document.getElementById("logout-student").addEventListener("click", function(e){
             })
                 // redirect to login page
                 .then(() => {
-                    window.location.href = "student-login.jsp";
+                    window.location.href = contextPath + "/student/student-login.jsp";
                 });
         })
 })
-
 

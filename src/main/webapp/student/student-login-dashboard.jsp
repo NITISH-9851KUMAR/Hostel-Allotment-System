@@ -2,7 +2,8 @@
 <%@ page import="java.util.List" %>
 <%@include file="modal-code.jsp" %>
 <%@ page isErrorPage="true" %>
-<%@ page errorPage="error-page.jsp" %>
+<%@ page errorPage="/student/student-error-page.jsp" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html><html class="light" lang="en"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -130,10 +131,8 @@
         <div class="hidden md:flex items-center gap-8">
             <button id="logout-student"
                     class="flex items-center gap-2 text-slate-500 hover:text-red-500 transition-colors active:scale-95">
-
                 <span class="material-symbols-outlined">logout</span>
                 <span class="font-semibold">Logout</span>
-
             </button>
         </div>
         <button class="md:hidden text-slate-500" style="">
@@ -385,7 +384,7 @@
 <!-- BottomNavBar (Mobile Only) -->
 <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl border-t border-[#c6c5d4]/15 shadow-[0_-10px_30px_rgba(26,35,126,0.04)]">
     <div class="flex justify-around items-center pb-safe pt-2 px-4 h-16">
-        <a class="flex flex-col items-center justify-center bg-[#1A237E] text-white rounded-xl px-4 py-1.5 transition-all duration-300 ease-out"
+        <a class="flex flex-col items-center justify-center bg-[#1A237E] text-white rounded-xl px-4 py-1.5 transition-all duration-300 ease-out">
             <span class="material-symbols-outlined" data-icon="dashboard" style="">dashboard</span>
             <span class="font-['Inter'] text-xs font-semibold" style="">Dashboard</span>
         </a>
@@ -407,7 +406,10 @@
     </div>
 </nav>
 </body>
-<script src="js/student-logout.js"></script>
-<script src="js/student-dashboard-modal.js"></script>
+<script>
+    const contextPath= "<%=request.getContextPath()%>";
+</script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="${pageContext.request.contextPath}/student/js/student-logout.js"></script>
+<script src="${pageContext.request.contextPath}/student/js/student-modal.js"></script>
 </html>
