@@ -4,5 +4,7 @@ CREATE TABLE student_register(
     id INT PRIMARY KEY AUTO_INCREMENT,
     prn VARCHAR(12) UNIQUE ,
     password VARCHAR(20),
-    FOREIGN KEY (prn) REFERENCES students(prn)
+    FOREIGN KEY (prn) REFERENCES students (prn)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
 );
