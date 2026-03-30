@@ -108,7 +108,7 @@
         room_space++;
     }
     room_space++;
-    String room_space_msg = null;
+    String room_space_msg;
     if (room_space == 8) {
         room_space_msg = "full";
     } else {

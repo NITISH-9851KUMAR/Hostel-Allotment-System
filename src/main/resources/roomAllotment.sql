@@ -1,7 +1,7 @@
 CREATE TABLE room_allotment
 (
     id int PRIMARY KEY AUTO_INCREMENT,
-    prn VARCHAR(10) UNIQUE,
+    prn VARCHAR(12) UNIQUE,
     room_number VARCHAR(10),
     allotment_date VARCHAR(50),
     FOREIGN KEY (prn) REFERENCES students (prn)

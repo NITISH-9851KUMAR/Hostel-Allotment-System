@@ -74,7 +74,6 @@ public class ValidDetails {
     }
 
     public static String getPassByPrn(String prn, String mobile, String email) {
-        String pass= null;
         String query = "SELECT prn FROM students WHERE prn = ? AND email= ? AND phone= ?";
         try (Connection connection = ConnectionProvider.getConnection();
              PreparedStatement pstm = connection.prepareStatement(query)) {
@@ -96,11 +95,32 @@ public class ValidDetails {
         } catch (Exception e) {
             logger.log(Level.SEVERE, "Error while opening account", e);
         }
-        return pass;
+        return null;
     }
 
-    public static void main(String[] args) {
-        System.out.println(getPassByPrn("220205131004", "nitish@gmail.com", "9835771204"));
+    public static Student studentDetailsByPrn(String prn) {
+        Student student = null;
+        String query = "SELECT * FROM students WHERE prn = ?";
+        try (Connection connection = ConnectionProvider.getConnection();
+             PreparedStatement pstm = connection.prepareStatement(query)) {
+            pstm.setString(1, prn);
+            try (ResultSet resultSet = pstm.executeQuery()) {
+                if (resultSet.next()) {
+                    student= new Student();
+                    student.setName(resultSet.getString("name"));
+                    student.setPrn(resultSet.getString("prn"));
+                    student.setEmail(resultSet.getString("email"));
+                    student.setPhone(resultSet.getString("phone"));
+                    student.setCourse(resultSet.getString("course"));
+                    student.setBranch(resultSet.getString("branch"));
+                    student.setYear(resultSet.getString("year"));
+                    student.setRoom_number(resultSet.getString("room_number"));
+                    student.setAllot_date(resultSet.getString("allotment_date"));
+                }
+            }
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, "Error while fetching Details", e);
+        }
+        return student;
     }
-
 }

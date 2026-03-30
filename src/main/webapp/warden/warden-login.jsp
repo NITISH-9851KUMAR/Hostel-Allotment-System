@@ -7,11 +7,8 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Administrative Portal Login</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-
     <style>
         body{
             font-family: 'Inter', sans-serif;
@@ -23,7 +20,7 @@
 
 <!-- ========== RESPONSIVE BACKGROUND (Change Image Anytime) ========== -->
 <div class="fixed inset-0 -z-10">
-    <img src="../image/Hostel_Image1.jpeg"
+    <img src="../image/Hostel_Image.png"
          class="w-full h-screen object-cover object-center"
          alt="background">
     <!-- Change overlay color here -->

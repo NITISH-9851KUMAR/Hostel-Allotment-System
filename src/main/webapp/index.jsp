@@ -65,7 +65,8 @@
             <div class="absolute inset-0 bg-slate-900/60 z-10"></div>
             <img alt="Modern college hostel building architecture" class="w-full h-full object-cover"
                  data-alt="Modern college hostel building with large windows"
-                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgKalhbctgWSd14hhWGD86IEsZqgvaDEF9kwrdftil_t9rAeE0OIpymYO70DAN1G4v7H9yxgGjk_vZI181YDfA_lbLb90ztQKzC77JsUEPJR8fFXCVUCnRNd6KbaW6weNE0UWsUw18xFSnvAUdcJZMgB5lvJ5C2bmY-hOdh_I6bA9pTifr6RUggLYePE3pnG3fAQXX96kvKhJKMMVSA8dxzLj4XHqal7Z2ryxpz7GE_SZh5CbYbcPLaTwlDoxXroCXNHqusidPcnFJ"/>
+                 src="image/Hostel_Image.png"/>
+
         </div>
         <div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-medium mb-6">
@@ -122,10 +123,6 @@
                     <h3 class="text-xl font-bold mb-2 dark:text-white">Administrative Login</h3>
                     <p class="text-slate-500 dark:text-slate-400 mb-8">Administrative access to manage inventory, allot
                         rooms, and generate student reports.</p>
-<%--                    <button onclick="window.location.href='${pageContext.request.contextPath}/warden/warden-login.jsp'" class="w-full py-4 rounded-xl bg-slate-900 dark:bg-slate-700 text-white font-bold transition-all hover:bg-slate-800 flex items-center justify-center gap-2">--%>
-<%--                        Enter Warden Portal--%>
-<%--                        <span class="material-symbols-outlined text-sm">admin_panel_settings</span>--%>
-<%--                    </button>--%>
                     <a href="${pageContext.request.contextPath}/warden/warden-login.jsp" class="w-full py-4 rounded-xl bg-slate-900 dark:bg-slate-700 text-white font-bold transition-all hover:bg-slate-800 flex items-center justify-center gap-2" >
                         Enter Administrative Portal
                         <span class="material-symbols-outlined text-sm">admin_panel_settings</span>

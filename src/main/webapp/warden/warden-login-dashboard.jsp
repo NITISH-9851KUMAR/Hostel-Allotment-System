@@ -143,15 +143,16 @@
                 <span class="material-symbols-outlined" data-icon="add_home">add_home</span>
                 <span class="font-manrope text-sm tracking-tight">Allot New Student</span>
             </a>
+            <a onclick="searchForm(this)"
+               class=" menu-link flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 text-slate-600 hover:text-blue-800 hover:bg-slate-200"
+            >
+                <span class="material-symbols-outlined" data-icon="group">search</span>
+                <span class="font-manrope text-sm tracking-tight">Search Students</span>
+            </a>
             <a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 text-slate-600 hover:text-blue-800 hover:bg-slate-200"
                href="#">
                 <span class="material-symbols-outlined" data-icon="hotel">hotel</span>
                 <span class="font-manrope text-sm tracking-tight">View Rooms</span>
-            </a>
-            <a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 text-slate-600 hover:text-blue-800 hover:bg-slate-200"
-               href="#">
-                <span class="material-symbols-outlined" data-icon="group">group</span>
-                <span class="font-manrope text-sm tracking-tight">View Students</span>
             </a>
             <a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 text-slate-600 hover:text-blue-800 hover:bg-slate-200"
                href="#">
@@ -181,22 +182,15 @@
 <main class="min-h-screen transition-all duration-300 lg:ml-64">
     <!-- Top Navigation Bar -->
     <header class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-4 sticky top-0 z-40 bg-white/90 backdrop-blur-xl shadow-sm shadow-blue-900/5">
-        <div class="flex items-center gap-4 lg:gap-6 flex-1">
-            <div class="relative w-full max-w-sm sm:max-w-md group">
-                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">search</span>
-                <input class="w-full bg-surface-container-lowest border-none rounded-xl py-2.5 pl-12 pr-4 text-sm focus:ring-2 focus:ring-blue-500/20 font-body outline-none transition-all"
-                       placeholder="Search students, rooms, or allotments..." type="text"/>
-            </div>
+        <div class="flex flex-col gap-2 lg:gap-3">
+            <h2 class="font-headline text-xl sm:text-2xl lg:text-3xl font-bold text-primary tracking-tight">
+                Welcome to Boys 5 Hostel Top Floor
+            </h2>
+            <p class="text-on-surface-variant font-medium">
+                Academic Year 2025-26 | Fall Semester Overview
+            </p>
         </div>
         <div class="flex items-center gap-3 sm:gap-6">
-            <div class="flex gap-2">
-                <button class="w-10 h-10 rounded-full flex items-center justify-center text-slate-500 hover:bg-surface-container-low transition-colors">
-                    <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
-                </button>
-                <button class="w-10 h-10 rounded-full flex items-center justify-center text-slate-500 hover:bg-surface-container-low transition-colors">
-                    <span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
-                </button>
-            </div>
             <div class="h-8 w-[1px] bg-outline-variant/30 mx-2 hidden sm:block"></div>
             <div class="flex items-center gap-3 group cursor-pointer">
                 <div class="text-right hidden sm:block">
@@ -213,14 +207,6 @@
 
     <%-- Page Content of Warden-login-dashboard Page --%>
     <div id="post-container" class="p-4 sm:p-6 lg:p-10 max-w-[1400px] mx-auto">
-        <!-- Welcome Header -->
-        <div class="mb-8 sm:mb-10 flex flex-col lg:flex-row lg:justify-between lg:items-end gap-4 lg:gap-0">
-            <div>
-                <h2 class="font-headline text-2xl sm:text-3xl lg:text-4xl font-extrabold text-primary tracking-tight mb-2">Welcome Warden Sir: B5 Top Floor</h2>
-                <p class="text-on-surface-variant font-medium">Academic Year 2025-26 | Fall Semester Overview</p>
-            </div>
-        </div>
-
         <!-- Dashboard Stats Bento Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
             <!-- Total Rooms -->
@@ -305,6 +291,21 @@
             <div class="px-4 sm:px-8 py-4 sm:py-6 border-b border-outline-variant/10 flex justify-between items-center">
                 <h3 class="font-headline text-lg sm:text-xl font-bold text-primary">Recent Student Allotments</h3>
             </div>
+            <%
+                if (count == 0) {
+            %>
+            <h3 class="flex items-center justify-center gap-2 bg-warning-container text-warning-on-container text-sm sm:text-base font-semibold py-3 px-4 rounded-md shadow-sm">
+                <svg class="w-4 h-4 text-warning-on-container" fill="currentColor" viewBox="0 0 20 20"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M8.257 3.099c.765-1.36 2.68-1.36 3.445 0l6.518 11.609c.75 1.336-.213 2.992-1.722 2.992H3.46c-1.509 0-2.472-1.656-1.722-2.992L8.257 3.1zM10 12a1 1 0 100 2 1 1 0 000-2zm.75-5.25a.75.75 0 10-1.5 0v3a.75.75 0 001.5 0v-3z"
+                          clip-rule="evenodd"/>
+                </svg>
+                No students have been allotted yet!
+            </h3>
+            <%
+            } else {
+            %>
             <div class="table-container">
                 <table class="w-full text-left">
                     <thead>
@@ -356,6 +357,9 @@
                     </tbody>
                 </table>
             </div>
+            <%
+                }
+            %>
         </section>
 
         <!-- Bottom Information Grid (Asymmetric) -->
@@ -395,6 +399,10 @@
     <div id="allot-new-student-section"></div>
     <!-- allot-new-student-section-->
 
+    <!-- Start allot-new-student-section This page is add by javascript method-->
+    <div id="student-search-section"></div>
+    <!-- allot-new-student-section-->
+
     <!-- Footer -->
     <footer class="px-4 sm:px-10 py-6 sm:py-8 border-t border-outline-variant/10 mt-8 sm:mt-12 text-center">
         <p class="text-xs text-outline font-medium">
@@ -408,6 +416,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="${pageContext.request.contextPath}/warden/js/warden-login-dashboard.js"></script>
 <script src="${pageContext.request.contextPath}/warden/js/add-new-student.js"></script>
+<script src="${pageContext.request.contextPath}/warden/js/search-student.js"></script>
 <script>
     // Mobile sidebar toggle functionality
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');

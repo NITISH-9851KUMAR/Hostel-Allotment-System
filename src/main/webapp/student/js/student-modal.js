@@ -1,6 +1,6 @@
 const btnPayment = document.getElementById("paymentBtn");
-const modalPayment = document.getElementById("contactModalPayment");
-const closePayment = document.getElementById("closeModalPayment");
+const modalPayment = document.getElementById("PaymentModal");
+const closePayment = document.getElementById("PaymentClose");
 
 btnPayment.onclick = function () {
     modalPayment.classList.remove("hidden");
@@ -10,9 +10,10 @@ closePayment.onclick = function () {
     modalPayment.classList.add("hidden");
 };
 
+
 const btnMaintenance = document.getElementById("maintenanceBtn");
-const modalMaintenance = document.getElementById("contactModal");
-const closeMaintenance = document.getElementById("closeModal");
+const modalMaintenance = document.getElementById("MaintenanceModal");
+const closeMaintenance = document.getElementById("MaintenanceClose");
 btnMaintenance.onclick = function () {
     modalMaintenance.classList.remove("hidden");
 }

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/resources/room.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/roomAllotment.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/student.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/student_register.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/warden.sql" dialect="MySQL" />
     <file url="PROJECT" dialect="MySQL" />
   </component>

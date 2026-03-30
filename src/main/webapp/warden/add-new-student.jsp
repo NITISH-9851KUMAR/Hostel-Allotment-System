@@ -177,7 +177,7 @@
                                maxlength="10"
                                pattern="[0-9]{10}"
                                placeholder="Enter phone number"
-                               title="PRN number must be exactly 12 digits"
+                               title="Mobile number must be exactly 10 digits"
                                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
                                class="w-full pl-12 pr-4 py-4 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-sm font-medium"/>
                     </div>
