@@ -28,9 +28,14 @@ public class WardenLoginDao {
                 }
             }
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "Error while opening account", e);
+            logger.log(Level.SEVERE, "Error while Fetching Details", e);
         }
         return warden;
+    }
+
+    public static void main(String[] args) {
+        Warden w= authenticateWardenLogin(983577L, "nitish");
+        System.out.println(w.getName());
     }
 
 }
