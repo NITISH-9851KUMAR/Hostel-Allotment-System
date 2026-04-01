@@ -110,6 +110,7 @@
                     type="text"
                     placeholder="Enter PRN"
                     name="prn"
+                    required
                     class="w-full pl-10 pr-4 py-2 sm:py-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-on-surface"
             />
         </div>
