@@ -149,21 +149,28 @@
                 <span class="material-symbols-outlined" data-icon="group">search</span>
                 <span class="font-manrope text-sm tracking-tight">Search Students</span>
             </a>
-            <a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 text-slate-600 hover:text-blue-800 hover:bg-slate-200"
-               href="#">
+
+            <a onclick="viewRooms(this)"
+                    class=" menu-link flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 text-slate-600 hover:text-blue-800 hover:bg-slate-200"
+               >
                 <span class="material-symbols-outlined" data-icon="hotel">hotel</span>
                 <span class="font-manrope text-sm tracking-tight">View Rooms</span>
             </a>
-            <a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 text-slate-600 hover:text-blue-800 hover:bg-slate-200"
-               href="#">
+
+            <a onclick="roomAllotment(this)"
+                    class=" menu-link flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 text-slate-600 hover:text-blue-800 hover:bg-slate-200"
+               >
                 <span class="material-symbols-outlined" data-icon="assignment_ind">assignment_ind</span>
                 <span class="font-manrope text-sm tracking-tight">Room Allotment</span>
             </a>
-            <a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 text-slate-600 hover:text-blue-800 hover:bg-slate-200"
-               href="#">
+
+            <a onclick="allotmentList(this)"
+                    class=" menu-link flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-200 text-slate-600 hover:text-blue-800 hover:bg-slate-200"
+               >
                 <span class="material-symbols-outlined" data-icon="list_alt">list_alt</span>
                 <span class="font-manrope text-sm tracking-tight">Allotment List</span>
             </a>
+
         </nav>
         <div class="pt-10 mt-auto">
             <a onclick="logoutWarden(event)"
@@ -401,6 +408,18 @@
 
     <!-- Start allot-new-student-section This page is add by javascript method-->
     <div id="student-search-section"></div>
+    <!-- allot-new-student-section-->
+
+<%--    view Room Section--%>
+    <div id="view-room-section"></div>
+    <!-- allot-new-student-section-->
+
+    <%--    Room Allotment Section--%>
+    <div id="room-allotment-section"></div>
+    <!-- allot-new-student-section-->
+
+    <%--    view Room Section--%>
+    <div id="Allotment-list-section"></div>
     <!-- allot-new-student-section-->
 
     <!-- Footer -->
