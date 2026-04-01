@@ -1,3 +1,7 @@
+<%@ page import="model.Warden" %>
+<%@ page import="static dao.GetStudentDetails.getRecentFiveStudent" %>
+<%@ page import="model.Student" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <%@ page isELIgnored="false" %>
 <html class="light" lang="en">
@@ -38,6 +42,12 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 
+<%
+    // get the student value
+    int percentValue = dao.CountValue.getPercentageValue();
+    int count = dao.CountValue.countAllotRoom();
+%>
+
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -46,8 +56,8 @@
                 <span class="material-symbols-outlined text-white">domain</span>
             </div>
             <div class="flex flex-col">
-                <span class="font-bold text-lg leading-tight text-slate-900 dark:text-slate-100">Hostel System</span>
-                <span class="text-[10px] uppercase tracking-widest text-primary font-semibold">University Hostel Portal</span>
+                <span class="font-bold text-lg leading-tight text-slate-900 dark:text-slate-100">Boys Hostel : B5</span>
+                <span class="text-[10px] uppercase tracking-widest text-primary font-semibold">Sandip University Hostel Portal</span>
             </div>
         </div>
         <div class="flex items-center gap-6">
@@ -59,7 +69,9 @@
         </div>
     </nav>
 </header>
+
 <main>
+<%--    section 1--%>
     <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 bg-slate-900/60 z-10"></div>
@@ -70,10 +82,10 @@
         </div>
         <div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-medium mb-6">
-<span class="relative flex h-2 w-2">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-</span>
+        <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+        </span>
                 Academic Year 2026 Allotment Now Open
             </div>
             <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
@@ -96,7 +108,89 @@
             <span class="material-symbols-outlined text-3xl">keyboard_double_arrow_down</span>
         </div>
     </section>
-    <section class="py-24 bg-background-light dark:bg-background-dark" id="login-portal">
+<%--section 2--%>
+    <section class="relative w-full flex items-center justify-center py-10">
+<%--    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">--%>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-20 mb-6 sm:mb-12">
+            <!-- Total Rooms -->
+            <div style="background-color: #ddd8d8;" class="bg-surface-container-lowest p-4 sm:p-6 rounded-xl border border-transparent hover:border-outline-variant/30 transition-all duration-300">
+                <div class="flex justify-between items-start mb-3 sm:mb-4">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-lg sm:text-3xl" data-icon="hotel">hotel</span>
+                    </div>
+                    <span class="text-xs font-bold text-primary px-2 py-1 bg-primary-container/10 rounded-full">Total Capacity</span>
+                </div>
+                <div class="space-y-1">
+                    <h3 class="text-2xl sm:text-3xl font-black text-on-surface">200</h3>
+                    <p class="text-xs sm:text-sm text-on-surface-variant font-medium">Total Rooms: 27</p>
+                </div>
+                <div class="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-outline-variant/10">
+                    <div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-primary h-full w-full"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rooms Space -->
+            <div style="background-color: #ddd8d8;" class="bg-surface-container-lowest p-4 sm:p-6 rounded-xl border border-transparent hover:border-outline-variant/30 transition-all duration-300">
+                <div class="flex justify-between items-start mb-3 sm:mb-4">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600">
+                        <span class="material-symbols-outlined text-lg sm:text-3xl" data-icon="assignment">assignment</span>
+                    </div>
+                    <span class="text-xs font-bold text-indigo-700 px-2 py-1 bg-indigo-100 rounded-full">Room Space</span>
+                </div>
+                <div class="space-y-1">
+                    <h3 class="text-xl sm:text-2xl font-black text-on-surface">8 Student</h3>
+                    <p class="text-xs sm:text-sm text-on-surface-variant font-medium">Every Room</p>
+                </div>
+                <div class="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-outline-variant/10">
+                    <div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-indigo-500 h-full w-[100%]"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Available Rooms -->
+            <div style="background-color: #ddd8d8;" class="bg-surface-container-lowest p-4 sm:p-6 rounded-xl border border-transparent hover:border-outline-variant/30 transition-all duration-300">
+                <div class="flex justify-between items-start mb-3 sm:mb-4">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600">
+                        <span class="material-symbols-outlined text-lg sm:text-3xl" data-icon="check_circle">check_circle</span>
+                    </div>
+                    <span class="text-xs font-bold text-emerald-700 px-2 py-1 bg-emerald-100 rounded-full">Ready to Occupy</span>
+                </div>
+                <div class="space-y-1">
+                    <h3 class="text-2xl sm:text-3xl font-black text-on-surface"><%=200 - count%></h3>
+                    <p class="text-xs sm:text-sm text-on-surface-variant font-medium">Available Total Beds</p>
+                </div>
+                <div class="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-outline-variant/10">
+                    <div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full" style="width: <%=100-percentValue%>%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total Students -->
+            <div style="background-color: rgba(243,222,222,0.83);" class="bg-surface-container-lowest p-4 sm:p-6 rounded-xl border border-transparent hover:border-outline-variant/30 transition-all duration-300">
+                <div class="flex justify-between items-start mb-3 sm:mb-4">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600">
+                        <span class="material-symbols-outlined text-lg sm:text-3xl" data-icon="group">group</span>
+                    </div>
+                    <span class="text-xs font-bold text-amber-700 px-2 py-1 bg-amber-100 rounded-full">Enrolled</span>
+                </div>
+                <div class="space-y-1">
+                    <h3 class="text-2xl sm:text-3xl font-black text-on-surface"><%=count%></h3>
+                    <p class="text-xs sm:text-sm text-on-surface-variant font-medium">Total Students</p>
+                </div>
+                <div class="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-outline-variant/10">
+                    <div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-amber-500 h-full" style="width: <%=percentValue%>%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<%--section 3--%>
+    <section class="py-15 bg-background-light dark:bg-background-dark" id="login-portal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-4">Access Portals</h2>
@@ -131,6 +225,7 @@
             </div>
         </div>
     </section>
+<%--    section 4--%>
     <section class="py-24 border-t border-slate-200 dark:border-slate-800" id="about">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-16">
@@ -174,6 +269,7 @@
         </div>
     </section>
 </main>
+
 <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900 py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row items-center justify-between gap-8">

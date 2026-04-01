@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-    <title>Academic Vanguard - Administrative Portal</title>
+    <title>Administrative Portal</title>
     <!-- Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
           rel="stylesheet"/>

@@ -8,6 +8,7 @@
         <entry key="file://$PROJECT_DIR$/src/main/webapp/student-login-dashboard.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/student/student-login-dashboard.jsp" value="file://$PROJECT_DIR$/src/main/webapp/student" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/warden-login-dashboard.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/warden/student-search-details.jsp" value="file://$PROJECT_DIR$/src/main/webapp/warden" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/warden/student-search-page.jsp" value="file://$PROJECT_DIR$/src/main/webapp/warden" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/warden/warden-login-dashboard.jsp" value="file://$PROJECT_DIR$/src/main/webapp/warden" />
       </map>

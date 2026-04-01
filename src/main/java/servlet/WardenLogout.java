@@ -13,7 +13,7 @@ public class WardenLogout extends HttpServlet {
         HttpSession session = request.getSession(false);
 
         if (session != null) {
-            session.invalidate();   // destroy session
+            session.invalidate();   // destroy all session
         }
 
         // disable browser cache

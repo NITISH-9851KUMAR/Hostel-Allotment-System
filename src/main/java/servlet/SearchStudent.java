@@ -25,9 +25,10 @@ public class SearchStudent extends HttpServlet {
 
         Student student = dao.ValidDetails.studentDetailsByPrn(prn);
         if (student != null) {
+            String roomSpace= dao.CountValue.countRoomSpace(student.getRoom_number());
             HttpSession session = request.getSession();
             session.setAttribute("search_student_details", student);
-            session.setAttribute("prn_value", prn);
+            session.setAttribute("room_space", roomSpace);
 
             response.setStatus(HttpServletResponse.SC_OK);
             out.print("{\"message\":\"Student Login successfully\"}");

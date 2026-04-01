@@ -19,23 +19,17 @@ function SearchStudent() {
                 return response.text();
             })// if return is ok then it will execute
             .then(() => {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Student Found Successfully',
-                    text: 'Welcome!',
-                    timer: 500
-                });
-                window.location.href = "studentDetails.jsp";
+                // load page
+                fetch(contextPath+"/warden/student-search-details.jsp")
+                    .then(res => res.text())
+                    .then(data => {
+                        document.getElementById("search-student-main-section").innerHTML = data;
+                        // addStudentFormSubmit();
+                    })
                 searchStudentMain.style.display= "block";
                 searchStudentErrorMessage.style.display= "none";
             })
             .catch(error => {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Student Not Found!',
-                    timer: 2000
-                });
                 searchStudentMain.style.display= "none";
                 searchStudentErrorMessage.style.display= "block";
             });

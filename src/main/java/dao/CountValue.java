@@ -51,7 +51,7 @@ public class CountValue {
                 roomMap.put(roomNumber, count);
             }
         } catch (Exception e) {
-            logger.log(Level.SEVERE, "Error while opening account", e);
+            logger.log(Level.SEVERE, "Error while Count Room Number with Room Space", e);
         }
         return roomMap;
     }
@@ -95,18 +95,43 @@ public class CountValue {
         return false;
     }
 
+//    Get percentage value for room space
     public static int getPercentageValue() {
         int val= countAllotRoom();
         return (int) ((val*100)/200.0);
     }
 
-    public static void main(String[] args) {
-        System.out.println(getPercentageValue());
-//        List<String> roomList= getEmptyRoom();
-//        for(String r: roomList){
-//            System.out.println(r);
-//        }
+//    count room space by room number
+    public static String countRoomSpace(String roomNumber) {
+        String msg= null;
+        String query = "SELECT count(*) FROM room_allotment where room_number= ? GROUP BY room_number;";
+        try (Connection connection = ConnectionProvider.getConnection();
+             PreparedStatement pstm = connection.prepareStatement(query)) {
 
+            pstm.setString(1, roomNumber);
+            try(ResultSet resultSet= pstm.executeQuery()){
+                if (resultSet.next()) {
+                    int count = resultSet.getInt(1);
+                    if(count==8){
+                        msg= "Available Space : No Space";
+                    }
+                    else{
+                        msg= "Available Space : "+(8-count);
+                    }
+                }
+            }
+
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, "Error while Count Room Number with Room Space", e);
+        }
+
+        return msg;
     }
+
+//    public static void main(String[] args) {
+//        System.out.println(countRoomSpace("R-412"));
+//
+//
+//    }
 
 }
