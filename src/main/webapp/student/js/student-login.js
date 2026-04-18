@@ -25,7 +25,7 @@ document.getElementById("student-login-form").addEventListener("submit", functio
                 timer: 1000,
                 showConfirmButton: false,
                 willClose: () => {
-                    window.location.href = contextPath+"student-login-dashboard.jsp";
+                    window.location.href = contextPath+"/student/student-login-dashboard.jsp";
                 }
             });
         })
