@@ -1,92 +1,94 @@
-Hostel Allotment System
+# Hostel Allotment System
+
 A Major Project developed as part of the B.Tech (CSE) curriculum.
 
-📸 Project Images
-
-# Bank Management System
-
-A Minor Project developed as part of the B.Tech (CSE) curriculum.
-
 ## 📸 Project Images
+## Home Page
+![Home-Page](src/main/webapp/image/Home-Page1.png)
+![Home-Page](src/main/webapp/image/Home-Page2.png)
+![Home-Page](src/main/webapp/image/Home-Page3.png)
+![Home-Page](src/main/webapp/image/Home-Page4.png)
 
-## Login Page
-![Login-Page](src/main/webapp/img/Login-Page.png)
-
-## Open Account
-![Open-Account](src/main/webapp/img/Open-Account.png)
-
-## Password Recover
-![Password-Recover](src/main/webapp/img/Password-Recover.png)
-
-## Transfer Balance
-![Transfer-Balance](src/main/webapp/img/Transfer-Balance.png)
-
-## Deposit Balance
-![Deposit-Balance](src/main/webapp/img/Deposit-Balance.png)
-
-## Change Mobile Number
-![Change-mobile-number](src/main/webapp/img/Change-mobile-number.png)
-
-## Change Password
-![Change-password](src/main/webapp/img/Change-password.png)
+## Admin Login Page
+![Admin-Login-Page](src/main/webapp/image/Admin-Login-Page.png)
 
 
+## Admin Dashboard Page
+![Admin-Dashboard-Page](src/main/webapp/image/Admin-Dashboard-Page.png)
+
+## Admin Privileges Page
+### Allot New Room
+![Admin-Privileges-Page1](src/main/webapp/image/Allot-New-Room.png)
+
+### Search Student Page
+![Admin-Privileges-Page1](src/main/webapp/image/Student-Search-Page.png)
+
+## Student Login Page
+![Student-Login-Page](src/main/webapp/image/Student-Login-Page.png)
+
+## Student Profile Page
+![Student-Login-Page](src/main/webapp/image/Student-Profile1.png)
+![Student-Login-Page](src/main/webapp/image/Student-Profile2.png)
+
+---
 
 ## 📘 Abstract
+The Hostel Management System (HMS) is a secure and efficient web-based application designed to 
+automate and simplify hostel administration processes. It replaces traditional manual record-keeping
+methods with a centralized digital platform that manages student registration, room allocation, 
+and complaint handling. The system enables administrators to efficiently maintain student records,
+monitor room occupancy, and manage hostel operations in real time.
 
-The **Bank Management System (BMS)** is a secure and efficient web-based application that streamlines essential banking operations for users and administrators. It replaces traditional manual systems with a centralized digital solution that supports customer registration, account management, transactions (deposit, withdrawal), balance checks, and statement generation.
-
+---
 
 ## 🎯 Objectives
 
-- Provide a digital platform for core banking operations.
-- Eliminate manual errors and delays through automation.
-- Ensure secure and fast access to banking services.
-- Simplify tasks for both customers and administrators.
+- Provide a centralized digital platform for managing hostel operations efficiently.
+- Reduce manual errors, paperwork, and administrative workload through automation.
+- Ensure secure storage and quick retrieval of student and hostel-related information.
+- Enable efficient monitoring of room occupancy, hostel records, and student Details.
+- Enhance transparency, accuracy, and overall efficiency in hostel management.
+- Provide a user-friendly system that offers fast and convenient access to hostel services.
 
 ---
 
 ## 🔑 Key Features
 
-### ➤ Account Management
-- Customer registration with personal & financial data
-- View/update customer information
+### ➤ Student Management
+- Student registration with personal and academic details
+- View and update student information
 
-### ➤ Transaction Management
-- Deposit and withdrawal functionality
-- View transaction history
-
-### ➤ Balance & Statement Inquiry
-- Real-time balance checks
-- Generate account statements (monthly/yearly)
+### ➤ Room Management
+- Room allocation to students
+- View room availability and occupancy status
 
 ### ➤ Security & Authentication
-- User login with two-layer authentication (username & password)
+- Secure user login with username and password
+- Role-based access control for administrators and students
 
 ---
 
 ## 🧩 System Modules
 
-- **User Registration Module** – For new customer account creation.
-- **Login Module** – Secure access using authentication.
-- **Banking Functions Module** – Balance checks, deposit, withdrawal, and transaction history.
-
+- **Student Registration Module** – For registering new students and maintaining their personal and academic details.
+- **Login Module** – Secure access for students and administrators using authentication credentials.
+- **Room Management Module** – For room allocation, room availability tracking, and occupancy management.
 ---
 
 ## 🛠️ Technologies Used
 
-| Category        | Tools / Languages                          |
-|----------------|---------------------------------------------|
-| Frontend       | HTML, CSS, JavaScript, JSP                  |
-| Backend        | Java (JDK 24), JDBC, Servlets               |
-| Database       | Oracle 11g XE / MySQL 8.0+                  |
-| Web Server     | Apache Tomcat 9                             |
-| IDE            | IntelliJ IDEA / Eclipse                     |
-| OS             | Windows 10/11 or Ubuntu 20.04+              |
-| Browser        | Chrome / Edge                               |
-| Cloud Hosting  | AWS EC2 (Ubuntu 20.04 LTS)                  |
-| Version Control| Git (Git Bash)                              |
-| File Transfer  | FileZilla                                   |
+| Category       | Tools / Languages              |
+|----------------|--------------------------------|
+| Frontend       | HTML, CSS, JavaScript, JSP     |
+| Backend        | Java (JDK 24), JDBC, Servlets  |
+| Database       | Oracle 11g XE / MySQL 8.0+     |
+| Web Server     | Apache Tomcat 9                |
+| IDE            | IntelliJ IDEA / Eclipse        |
+| OS             | Windows 10/11 or Ubuntu 20.04+ |
+| Browser        | Ulaa / Chrome / Edge           |
+| Cloud Hosting  | AWS EC2 (Ubuntu 20.04 LTS)     |
+| Version Control| Git (Git Bash)                 |
+| File Transfer  | FileZilla                      |
 
 
 ## ☁️ Deployment Architecture
