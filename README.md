@@ -26,6 +26,10 @@ A Major Project developed as part of the B.Tech (CSE) curriculum.
 ## Student Login Page
 ![Student-Login-Page](src/main/webapp/image/Student-Login-Page.png)
 
+## Student Register Page
+![Student-Login-Page](src/main/webapp/image/Student-Register-Page.png)
+
+
 ## Student Profile Page
 ![Student-Login-Page](src/main/webapp/image/Student-Profile1.png)
 ![Student-Login-Page](src/main/webapp/image/Student-Profile2.png)
